@@ -26,11 +26,12 @@ public class App
             }
             return l;
             
-         if(l.size() > 2){ //Para listas com mais de 2 elementos
-                List A = l.subList(0, l.size()/2);
-                List B = l.subList(l.size()/2, l.size());
+         if(l.size() > 1){ //Para listas com mais de 2 elementos
+            ArrayList<Integer> A = new ArrayList<>(l.subList(0, l.size()/2));
+            ArrayList<Integer> B = new ArrayList<>(l.subList(l.size()/2, l.size()));
             }
-     List final = new ArrayList<>();        
+            
+        List final = new ArrayList<>();        
            return final.addFinal(mergeSort());
     }
     public static void main( String[] args )
