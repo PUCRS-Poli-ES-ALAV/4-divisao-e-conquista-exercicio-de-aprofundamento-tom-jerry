@@ -14,11 +14,11 @@ public class App
 {
     List  mergeSort(List l){
         if(l.size() == 1){
-            retunr l;
+            return l;
         }
 
         if(l.size() == 2){ //Ordenar lista com dois elementos
-            if(l.get(0))> l.get(1){
+            if(l.get(0) > l.get(1)) {
                 int temp = l.get(0);
                 l.set(0, l.get(1));
                 l.set(1, temp);
@@ -31,7 +31,7 @@ public class App
                 List B = l.subList(l.size()/2, l.size());
             }
      List final = new ArrayList<>();        
-           return final.addFinal(mergeSort()); 
+           return final.addFinal(mergeSort());
     }
     public static void main( String[] args )
     {
