@@ -8,34 +8,50 @@
 // RETURN L. 
 package br.pucrs;
 import java.util.List;
+import java.util.Random;
 import java.util.list;
+import java.util.Random;
 import java.util.ArrayList;
 public class App 
 {
-    List  mergeSort(List l){
-        if(l.size() == 1){
-            return l;
-        }
-
-        if(l.size() == 2){ //Ordenar lista com dois elementos
-            if(l.get(0) > l.get(1)) {
-                int temp = l.get(0);
-                l.set(0, l.get(1));
-                l.set(1, temp);
+    static long maxVal2(long A[], int init, int end) { 
+        int cont = 0; 
+        if (end - init <= 1)
+            return max(A[init], A[end]);  
+        else {
+                int m = (init + end)/2;
+                long v1 = maxVal2(A,init,m);   
+                long v2 = maxVal2(A,m+1,end);  
+                max(v1,v2);
+                return cont++;
             }
-            }
-            return l;
-            
-         if(l.size() > 1){ //Para listas com mais de 2 elementos
-            ArrayList<Integer> A = new ArrayList<>(l.subList(0, l.size()/2));
-            ArrayList<Integer> B = new ArrayList<>(l.subList(l.size()/2, l.size()));
-            }
-            
-        List final = new ArrayList<>();        
-           return final.addFinal(mergeSort());
     }
+    // List  mergeSort(List l){
+    //     if(l.size() == 1){
+    //         return l;
+    //     }
+
+    //     if(l.size() == 2){ //Ordenar lista com dois elementos
+    //         if(l.get(0) > l.get(1)) {
+    //             int temp = l.get(0);
+    //             l.set(0, l.get(1));
+    //             l.set(1, temp);
+    //         }
+    //         return l;
+    //     }
+    //     //Para listas com mais de 2 elementos
+    //     ArrayList<Integer> A = new ArrayList<>(l.subList(0, l.size()/2));
+    //     ArrayList<Integer> B = new ArrayList<>(l.subList(l.size()/2, l.size()));
+    //     //List final = new ArrayList<>();        
+    //     //return final.addFinal(mergeSort());
+    //         return;
+    //  }
+
+    
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        // System.out.println( "Hello World!" );
+        Random rand = new Random();
+        int op = maxVal2(rand.nextInt(32), 0, 31);
     }
 }
