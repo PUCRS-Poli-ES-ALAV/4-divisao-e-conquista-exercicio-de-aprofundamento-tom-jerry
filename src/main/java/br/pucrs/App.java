@@ -7,25 +7,22 @@
 // L ← MERGE(A, B).
 // RETURN L. 
 package br.pucrs;
-import java.util.List;
 import java.util.Random;
-import java.util.list;
-import java.util.Random;
-import java.util.ArrayList;
 public class App 
 {
     static long maxVal2(long A[], int init, int end) { 
         int cont = 0; 
         if (end - init <= 1)
-            return max(A[init], A[end]);  
+            return Math.max(A[init], A[end]);  
         else {
                 int m = (init + end)/2;
                 long v1 = maxVal2(A,init,m);   
                 long v2 = maxVal2(A,m+1,end);  
-                max(v1,v2);
+                Math.max(v1,v2);
                 return cont++;
             }
     }
+    
     // List  mergeSort(List l){
     //     if(l.size() == 1){
     //         return l;
